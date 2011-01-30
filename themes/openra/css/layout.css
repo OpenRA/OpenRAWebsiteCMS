@@ -20,7 +20,8 @@ div.bar
 	width: 100%;
 }
 
-p.download
+p.download,
+.newsDetails
 {
 	font-size: 0.8em;
 }
@@ -92,6 +93,10 @@ p.download
 	float: right; 
 	width: 450px;
 	text-align: center
+}
+#Sidebar img
+{
+	border: none;
 }
 #Sidebar strong
 {

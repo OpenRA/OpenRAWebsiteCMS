@@ -1,45 +1,4 @@
-<script type="text/javascript">
-	$(function() {
-		/*$.get("downloads.txt", function(data) {
-			$("#stats_down").html(data);
-		});
-
-		$.get("/games.txt", function(data) {
-			$("#stats_games").html(data);
-		});
-
-		$.get("/master/list.php", function(data) {
-			if (data.length <= 3) { $("#stats_players").html("0"); return; }
-			var m, sum = 0;
-			var p = /^\s*Players: (\d+)/mg;
-			while ((m = p.exec(data)) != null) {
-				sum += (Number)(m[1]);
-			}
-			$("#stats_players").html(sum);
-		});
-		
-		$.getJSON("/releases/windows/version.json", function(data) {
-		    $("#down_btn_win span.desc").html(
-		        "version: " + data.version + " " +
-		        "size: " + data.size);
-		});
-		
-		$.getJSON("/releases/mac/version.json", function(data) {
-		    $("#down_btn_mac span.desc").html(
-		        "version: " + data.version + " " +
-		        "size: " + data.size);
-		});*/
-	});
-</script>
 <div id="Sidebar">
-	<!--<div style="margin: 0 auto; width: 100%">
-		<span class="stats">
-			<strong id="stats_games">--</strong><span class="desc">total games played</span>
-		</span>
-		<span class="stats">
-			<strong id="stats_down">--</strong><span class="desc">downloads</span>
-		</span>
-	</div>-->
 	<a href="releases/$Platform.Main/latest.php"><img src="$ThemeDir/images/{$Platform.Main}_download.png" /></a>
 	<p class="download">
 		<a href="releases/$Platform.Other1/latest.php">Download OpenRA for $Platform.Other1</a>

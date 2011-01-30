@@ -16,22 +16,6 @@ class HomePage_Controller extends Page_Controller {
 		Requirements::javascript('mysite/javascript/jquery.cycle.min.js');
 	}
 	
-	private function DownloadButton($platform)
-	{
-		return <<<HTML
-		<a href="releases/$platform/latest.php"><img src="themes/openra/images/{$platform}_download.png" /></a>
-HTML;
-	}
-	
-	private function DownloadLink($platform)
-	{
-		return <<<HTML
-		<p class="download">
-			<a href="releases/$platform/latest.php">Download OpenRA for $platform</a>
-		</p>
-HTML;
-	}
-	
 	public function Platform() {
 		$user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
 		if (strpos($user_agent, "x11") !== FALSE || strpos($user_agent, "linux") !== FALSE)
@@ -40,6 +24,11 @@ HTML;
 			return new ArrayData(array('Main' => 'OS X', 'Other1' => 'Windows', 'Other2' => 'Linux'));
 		else
 			return new ArrayData(array('Main' => 'Windows', 'Other1' => 'OS X', 'Other2' => 'Linux'));
+	}
+	
+	function LatestNews($num=5) {
+		$news = DataObject::get_one("NewsHolder");
+		return ($news) ? DataObject::get("NewsPage", "ParentID = $news->ID", "Date DESC", "", $num) : false;
 	}
 }
 
