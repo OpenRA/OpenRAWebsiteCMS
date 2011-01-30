@@ -20,6 +20,19 @@ div.bar
 	width: 100%;
 }
 
+p.download
+{
+	font-size: 0.8em;
+}
+
+.rounded
+{
+	border-radius: 10px; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+
 #Container 
 {	
 	width: 1024px; 
@@ -71,6 +84,34 @@ div.bar
 #Navigation a { text-decoration: none; color: White }
 #Navigation a:visited { text-decoration: none; color: White }
 #Navigation a:hover { text-decoration: none; color: White }
+
+/* Sidebar */
+#Sidebar
+{
+	margin-top: 19px;
+	float: right; 
+	width: 450px;
+	text-align: center
+}
+#Sidebar strong
+{
+	font-size: 2.3em;
+	display: block
+}
+#Sidebar .stats
+{
+	display: inline-block;
+	margin-right: 10px;
+}
+#Sidebar .desc
+{
+	font-size: 0.8em
+}
+
+#Sidebar a.desc
+{
+	font-size: 0.7em
+}
 
 #Footer
 {

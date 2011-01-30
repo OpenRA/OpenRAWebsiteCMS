@@ -5,10 +5,11 @@
 		<title>$SiteConfig.Title - $Title</title>
 		<% require themedCSS(layout) %> 
 		<% require themedCSS(typography) %>
+		<% require themedCSS(form) %>
 	</head>
 	<body>
 		<div id="Header" class="bar typography">
-			<h1><img src="themes/openra/images/soviet-logo.png" />$SiteConfig.Title</h1>
+			<h1><img src="$ThemeDir/images/soviet-logo.png" />$SiteConfig.Title</h1>
 		</div>
 		<div id="Container">
 			<div id="Navigation" class="typography">
@@ -27,6 +28,5 @@
 				trademarks of Electronic Arts Inc.in the U.S. and/or other countries.<br />
 			</p>
 		</div>
-		$SilverStripeNavigator
 	</body>
 </html>
