@@ -1,0 +1,18 @@
+.typography * {
+	font-family: Cambria, Georgia, Times New Roman, Serif;
+}
+
+.typography h1 { 
+	font-family: Cambria, Georgia, Times New Roman, Serif 
+}
+
+.typography h2, 
+.typography h3 { 
+	font-family: Helvetica, Arial, Sans-Serif 
+}
+
+.typography pre, 
+.typography code {
+	font-family: Consolas, Incosolata, Lucida Console, Monospace;
+}
+

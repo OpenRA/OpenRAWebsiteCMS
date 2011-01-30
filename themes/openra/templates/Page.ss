@@ -7,21 +7,20 @@
 		<% require themedCSS(typography) %>
 	</head>
 	<body>
-		<div id="Header" class="bar">
+		<div id="Header" class="bar typography">
 			<h1><img src="themes/openra/images/soviet-logo.png" />$SiteConfig.Title</h1>
 		</div>
-		<div id="Main">
-			<div id="Navigation">
+		<div id="Container">
+			<div id="Navigation" class="typography">
 				<% control Menu(1) %>
-				<span class="links"><a href="$Link">$MenuTitle.XML</a></span>
+				<span class="links"><a href="$Link">$MenuTitle</a></span>
 				<% end_control %>
 			</div>
-			<div id="singlecolumn" class="typography">
-				$Content
-				$Form
+			<div id="Layout">
+				$Layout
 			</div>
 		</div>
-		<div id="Footer" class="bar">
+		<div id="Footer" class="bar typography">
 			<p id="trademarks">
 				Copyright &copy; 2007-2011 The OpenRA Developers<br />
 				Command &amp; Conquer and Command &amp; Conquer Red Alert are trademarks or registered

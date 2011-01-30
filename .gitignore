@@ -2,7 +2,7 @@ themes
 sapphire
 googlesitemaps
 cms
-assets
+sqlite3
 ChangeLog
 COPYING
 INSTALL
@@ -11,3 +11,5 @@ Makefile
 phpunit.xml.dist
 UPGRADING
 web.config
+openra.db
+_combinedfiles
