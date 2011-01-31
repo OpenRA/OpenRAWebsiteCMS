@@ -10,6 +10,7 @@ class NewsPage extends Page {
 	static $defaults = array(
 		'ProvideComments' => true
 	);
+	static $allowed_children = "none";
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -24,9 +25,19 @@ class NewsPage extends Page {
 		
 		return $fields;
 	}
+	
+	public function populateDefaults() {
+		$this->Date = SS_Datetime::now();
+		$this->AuthorID = Member::currentUser()->ID;
+		parent::populateDefaults();
+	}
 }
 
 class NewsPage_Controller extends Page_Controller {
+	function init() {
+//		RSSFeed::linkToFeed($this->Link() . "rss");
+		parent::init();
+	}
 }
 
 ?>

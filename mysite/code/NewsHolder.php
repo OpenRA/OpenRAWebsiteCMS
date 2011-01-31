@@ -21,6 +21,17 @@ class NewsHolder_Controller extends Page_Controller {
 		$rss = new RSSFeed($this->Children(), $this->Link(), "OpenRA News and Updates");
 		$rss->outputToBrowser();
 	}
+	
+	function SortedChildren()
+	{
+		$children = $this->Children();
+		
+		if (!$children) return null;
+		
+		$children->sort('Date', 'DESC');
+		
+		return $children;
+	}
 }
 
 ?>

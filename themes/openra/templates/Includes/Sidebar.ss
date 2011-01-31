@@ -1,5 +1,6 @@
 <div id="Sidebar">
-	<a href="releases/$Platform.Main/latest.php"><img src="$ThemeDir/images/{$Platform.Main}_download.png" /></a>
+	<div id="Screenshot"><img width="300px" src="$Screenshot"/></div>
+	<a href="releases/$Platform.Main/latest.php"><img width="306" height="68" src="$ThemeDir/images/{$Platform.Main}_download.png" /></a>
 	<p class="download">
 		<a href="releases/$Platform.Other1/latest.php">Download OpenRA for $Platform.Other1</a>
 	</p>

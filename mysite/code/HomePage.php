@@ -11,9 +11,6 @@ class HomePage extends Page {
 class HomePage_Controller extends Page_Controller {
 	public function init() {
 		parent::init();
-		Requirements::set_write_js_to_body(false);
-		Requirements::javascript('mysite/javascript/jquery-1.4.2.min.js');
-		Requirements::javascript('mysite/javascript/jquery.cycle.min.js');
 	}
 	
 	public function Platform() {
@@ -29,6 +26,19 @@ class HomePage_Controller extends Page_Controller {
 	function LatestNews($num=5) {
 		$news = DataObject::get_one("NewsHolder");
 		return ($news) ? DataObject::get("NewsPage", "ParentID = $news->ID", "Date DESC", "", $num) : false;
+	}
+	
+	function Screenshot() {
+		$screenshotsFolder = Folder::findOrMake("images/screenshots");
+		if (!$screenshotsFolder->hasChildren()) return null;
+				
+		$children = $screenshotsFolder->Children();
+		while(true)	{
+			$rand = rand(0, $children->Count());
+			$a = $children->toArray();
+			if ($a[$rand])
+				return $a[$rand]->getRelativePath();
+		}
 	}
 }
 
