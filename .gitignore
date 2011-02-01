@@ -1,4 +1,5 @@
-themes
+themes/tutorial
+themes/blackcandy*
 sapphire
 googlesitemaps
 cms
@@ -13,3 +14,6 @@ UPGRADING
 web.config
 openra.db
 _combinedfiles
+_resampled
+_config.php
+

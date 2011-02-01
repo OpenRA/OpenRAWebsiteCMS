@@ -9,6 +9,8 @@ class NewsHolder extends Page {
 	static $allowed_children = array(
 		'NewsPage'
 	);
+	
+	static $icon = "themes/openra/images/treeicons/news";
 }
 
 class NewsHolder_Controller extends Page_Controller {

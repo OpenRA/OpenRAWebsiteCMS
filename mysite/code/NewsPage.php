@@ -12,6 +12,8 @@ class NewsPage extends Page {
 	);
 	static $allowed_children = "none";
 	
+	static $icon = "themes/openra/images/treeicons/news";
+	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		

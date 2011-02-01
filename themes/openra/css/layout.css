@@ -122,6 +122,7 @@ p.download,
 /* Footer */
 #Footer
 {
+	clear: both;
 	font-size: 0.7em; 
 	margin-bottom: 10px;
 	text-align: center;
@@ -134,10 +135,12 @@ p.download,
 
 #NewsList
 {
-	border: solid 3px #650b03;
-	padding-right: 40px;
-	padding-top: 20px;
+/*	border: solid 3px #650b03;
+	background-color: #000; */
+	padding-left: 0px;
+	padding-right: 0px;
 	padding-bottom: 10px;
+	font-size: 0.8em;
 }
 
 #NewsList li
@@ -152,7 +155,15 @@ p.download,
 
 #NewsList .newsDateTitle a
 {
+	font-family: Helvetica, Arial, Sans-Serif;
+	font-weight: bold;
 	font-size: 1.5em;
+	text-decoration: none;
+}
+
+#NewsList .newsDateTitle a:hover
+{
+	text-decoration: underline;
 }
 
 #NewsList .newsCommentCount
@@ -167,4 +178,10 @@ p.download,
 	margin-right: auto;
 	margin-bottom: 10px; 
 	width: 300px;
+}
+
+#DownloadLatest img
+{
+	float: left;
+	margin-right: 1em;
 }

@@ -6,6 +6,8 @@ class HomePage extends Page {
 	
 	static $has_one = array(
 	);
+	
+	static $icon = "themes/openra/images/treeicons/home";
 }
 
 class HomePage_Controller extends Page_Controller {
@@ -15,12 +17,15 @@ class HomePage_Controller extends Page_Controller {
 	
 	public function Platform() {
 		$user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+		$windows = new ArrayData(array('Name' => 'win', 'Desc' => 'Windows'));
+		$linux = new ArrayData(array('Name' => 'linux', 'Desc' => 'GNU/Linux'));
+		$mac = new ArrayData(array('Name' => 'mac', 'Desc' => 'OS X'));
 		if (strpos($user_agent, "x11") !== FALSE || strpos($user_agent, "linux") !== FALSE)
-			return new ArrayData(array('Main' => 'Linux', 'Other1' => 'Windows', 'Other2' => 'OS X'));
+			return new ArrayData(array('Main' => $linux, 'Other1' => $windows, 'Other2' => $mac));
 		else if (strpos($user_agent, "mac") !== FALSE)
-			return new ArrayData(array('Main' => 'OS X', 'Other1' => 'Windows', 'Other2' => 'Linux'));
+			return new ArrayData(array('Main' => $mac, 'Other1' => $windows, 'Other2' => $linux));
 		else
-			return new ArrayData(array('Main' => 'Windows', 'Other1' => 'OS X', 'Other2' => 'Linux'));
+			return new ArrayData(array('Main' => $windows, 'Other1' => $mac, 'Other2' => $linux));
 	}
 	
 	function LatestNews($num=5) {

@@ -6,7 +6,6 @@ class Page extends SiteTree {
 
 	public static $has_one = array(
 	);
-
 }
 class Page_Controller extends ContentController {
 
