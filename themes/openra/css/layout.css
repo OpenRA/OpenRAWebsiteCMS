@@ -185,3 +185,14 @@ p.download,
 	float: left;
 	margin-right: 1em;
 }
+
+#PlatformList li
+{
+	list-style-type: none;
+}
+
+#PlatformList img
+{
+	vertical-align: middle;
+	margin-right: 1em;
+}
