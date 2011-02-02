@@ -13,9 +13,11 @@
 		</div>
 		<div id="Container">
 			<div id="Navigation" class="typography">
-				<% control Menu(1) %>
-				<span class="links"><a href="$Link">$MenuTitle</a></span>
-				<% end_control %>
+				<% cached 'navigation', Aggregate(Page).Max(LastEdited) %>
+					<% control Menu(1) %>
+					<span class="links"><a href="$Link">$MenuTitle</a></span>
+					<% end_control %>
+				<% end_cached %>
 			</div>
 			<div id="Layout">
 				$Layout

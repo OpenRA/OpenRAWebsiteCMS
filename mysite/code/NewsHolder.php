@@ -34,6 +34,10 @@ class NewsHolder_Controller extends Page_Controller {
 		
 		return $children;
 	}
+	
+	function CommentsTimeout() {
+		return (int)(time() / 60 / 5);
+	}
 }
 
 ?>

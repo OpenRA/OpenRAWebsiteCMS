@@ -23,6 +23,12 @@ class DownloadHolder extends Page {
 }
 
 class DownloadHolder_Controller extends Page_Controller {
+
+	function ChildrenCacheKey() {
+		$children = $this->Children();
+		$children->sort('LastEdited', 'DESC');
+		return $children->First()->LastEdited;
+	}
 }
 
 ?>

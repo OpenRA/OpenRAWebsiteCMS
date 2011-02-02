@@ -3,7 +3,8 @@
 class DownloadPage extends Page {
 	static $db = array(
 		'Folder' => 'Text',
-		'FilePattern' => 'Text'
+		'FilePattern' => 'Text',
+		'DownloadCount' => 'Int'
 	);
 
 	static $has_one = array(
@@ -94,13 +95,13 @@ class DownloadPage_Controller extends Page_Controller {
 			$this->httpError(404);
 			return;
 		}
-			
+		$this->data()->DownloadCount += 1;
+		$this->data()->write();	
 		Director::redirect($download_file->getRelativePath());
 	}
 	
-	static function clearLatestDownload() {
-		self::$latestDownload = array(
-		);
+	function FolderModCacheKey() {
+		return Filesystem::folderModTime(ASSETS_DIR . '/' . $this->Folder);
 	}
 }
 

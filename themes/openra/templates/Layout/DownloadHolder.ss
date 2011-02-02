@@ -1,6 +1,8 @@
+<% cached LastEdited %>
 <div id="Content" class="singlecolumn typography">
 $Content
 <ul id="PlatformList">
+<% cached 'platforms', ChildrenCacheKey %>
 <% control Children %>
 	<li>
 	<a href="$Link" title="Download for $Title">
@@ -11,6 +13,8 @@ $Content
 	</a>
 	</li>
 <% end_control %>
+<% end_cached %>
 </ul>
 $Form
 </div>
+<% end_cached %>

@@ -45,6 +45,18 @@ class HomePage_Controller extends Page_Controller {
 				return $a[$rand]->getRelativePath();
 		}
 	}
+	
+	function CommentsTimeout() {
+		return (int)(time() / 60 / 5);
+	}
+	
+	function DownloadSum() {
+		return $this->Aggregate('DownloadPage')->Sum('DownloadCount');
+	}
+	
+	function GamesPlayed() {
+		return file_get_contents(Director::baseFolder() . '/games.txt');
+	}
 }
 
 ?>

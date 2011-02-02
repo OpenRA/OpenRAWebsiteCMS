@@ -1,9 +1,12 @@
+<% cached LastEdited %>
 <div id="Content" class="singlecolumn typography">
+	<% cached 'parent', $Parent.LastEdited, LastEdited %>
     <% if Level(2) %>
         <div class="breadcrumbs">
             $Breadcrumbs
         </div>
     <% end_if %>
+    <% end_cached %>
              
     <h2>$Title</h2>
     <div class="newsDetails">
@@ -12,3 +15,4 @@
     $Content
     $PageComments
 </div>
+<% end_cached %>
