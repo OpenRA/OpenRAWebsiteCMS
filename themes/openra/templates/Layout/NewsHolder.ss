@@ -3,7 +3,7 @@
 	<h2>$Title</h2>
 	$Content
 	<ul id="NewsList" class="rounded">
-		<% cached 'newsposts', Aggregate(NewsPage).Max(LastEdited), Aggregate(NewsPage).Max(CommentsTimeout) %>
+		<% cached 'newsposts', Aggregate(NewsPage).Max(LastEdited), CommentsTimeout %>
 			<% control SortedChildren %>
 				<li class="newsDateTitle"><a href="$Link" title="Read more on &quot;{$Title}&quot;">$Title</a></li>
 		        <li class="newsDateTitle">$Date.Nice24</li>
