@@ -34,6 +34,11 @@ p.download,
 	-khtml-border-radius: 10px;
 }
 
+.breadcrumbs
+{
+	margin-top: 1em;
+}
+
 #Container 
 {	
 	width: 1024px; 
@@ -195,4 +200,5 @@ p.download,
 {
 	vertical-align: middle;
 	margin-right: 1em;
+	border: none;
 }
