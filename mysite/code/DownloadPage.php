@@ -14,6 +14,8 @@ class DownloadPage extends Page {
 	static $allowed_children = 'none';
 	
 	static $icon = 'themes/openra/images/treeicons/download';
+
+	static $extensions = array();
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
