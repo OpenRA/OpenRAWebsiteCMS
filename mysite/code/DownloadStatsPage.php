@@ -15,13 +15,13 @@ class DownloadStatsPage_Controller extends Page_Controller {
 			$labels[] = $label[0];
 		}
 
-		$foo = array()
+		$foo = array();
 
 		for ($i = 0; $i < count($labels); i++) {
-			$foo[$labels[i]] = $values[i]
+			$foo[$labels[i]] = $values[i];
 		}
 
-		rsort($foo)
+		rsort($foo);
 		
 		$url = "https://chart.googleapis.com/chart?cht=bvs&chd=t:" .
 			implode(",", array_values($foo)); //Chart data
