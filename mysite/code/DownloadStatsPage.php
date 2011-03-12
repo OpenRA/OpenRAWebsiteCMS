@@ -10,7 +10,8 @@ class DownloadStatsPage_Controller extends Page_Controller {
 		$values = array();
 		foreach ($downloads as $download) {
 			$label = explode(" ", $download->Title);
-			$values[$label[0]] = $download->DownloadCount;
+			$temp = $label[0];
+			$values[$temp] = $download->DownloadCount;
 		}
 
 		rsort($values);
