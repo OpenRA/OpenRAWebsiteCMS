@@ -1,6 +1,7 @@
 fieldset
 {
 	border: none;
+	padding: 0;
 }
 
 textarea
@@ -9,6 +10,31 @@ textarea
 }
 
 .field label
+{
+	font-size: 0.8em;
+}
+
+.textarea textarea,
+.text input
+{
+	font-size: 0.8em;
+	background-color: #272D2C;
+	color: white;
+	border: solid 2px #650B03;
+	margin-bottom: 1em;
+}
+
+.Actions .action
+{
+	background-color: #272D2C;
+	color: white;
+	border: solid 2px #650B03;
+	margin-top: 10px;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+
+.message
 {
 	font-size: 0.8em;
 }

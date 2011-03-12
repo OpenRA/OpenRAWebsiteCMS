@@ -11,8 +11,16 @@ class HomePage extends Page {
 }
 
 class HomePage_Controller extends Page_Controller {
+	static $allowed_actions = array(
+		'syncdownloads'
+	);
+
 	public function init() {
 		parent::init();
+	}
+
+	function syncdownloads() {
+		Filesystem::sync();
 	}
 	
 	public function Platform() {
@@ -51,7 +59,8 @@ class HomePage_Controller extends Page_Controller {
 	}
 	
 	function DownloadSum() {
-		return $this->Aggregate('DownloadPage')->Sum('DownloadCount');
+		return 
+$this->Aggregate('DownloadPage')->Sum('DownloadCount') + 30023;
 	}
 	
 	function GamesPlayed() {

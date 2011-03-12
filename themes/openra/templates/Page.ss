@@ -8,6 +8,8 @@
 		<% require themedCSS(form) %>
 	</head>
 	<body>
+	<div id="Wrap">
+		<div style="padding-top: 30px;">
 		<div id="Header" class="bar typography">
 			<h1><img src="$ThemeDir/images/soviet-logo.png" />$SiteConfig.Title</h1>
 		</div>
@@ -23,11 +25,13 @@
 				$Layout
 			</div>
 		</div>
-		<div id="Footer" class="bar typography">
-			<p id="trademarks">
-				Copyright &copy; 2007-2011 The OpenRA Developers<br />
-				Platform icons by Tatice (<a href="http://tatice.deviantart.com/">http://tatice.deviantart.com/</a>)
-			</p>
 		</div>
+	</div>
+	<div id="Footer" class="bar typography">
+		<p id="trademarks">
+			Copyright &copy; 2007-2011 The OpenRA Developers<br />
+			Platform icons by Tatice (<a href="http://tatice.deviantart.com/">http://tatice.deviantart.com/</a>)
+		</p>
+	</div>
 	</body>
 </html>

@@ -1,4 +1,9 @@
 @import url(/themes/openra/css/openra.css);
+
+html, body {
+	height: 100%; /* sticky footer */
+}
+
 body { 
 	background-color: black; 
 	margin: 0px; 
@@ -39,19 +44,23 @@ p.download,
 	margin-top: 1em;
 }
 
+#Wrap
+{
+	min-height: 100%;
+	background-image: url("../images/background.jpg");
+        background-repeat: no-repeat;
+}
+
 #Container 
 {	
 	width: 1024px; 
-	background-image: url("../images/background.jpg");
-	background-repeat: no-repeat; 
 	margin: 0 auto;
 	padding: 20px 0px;
 }
 
 #Header
 {
-	margin-top: 30px;
-	height: 66px
+	height: 66px;
 }
 
 #Header h1
@@ -64,6 +73,12 @@ p.download,
 {
 	vertical-align: middle; 
 	margin: -30px 0px;
+}
+
+#Container
+{
+	overflow: auto;
+	padding-bottom: 60px;
 }
 
 #Content.twocolumn
@@ -129,8 +144,10 @@ p.download,
 {
 	clear: both;
 	font-size: 0.7em; 
-	margin-bottom: 10px;
 	text-align: center;
+	position: relative;
+	margin-top: -60px;
+	height: 54px;
 }
 
 #Footer .trademarks
@@ -176,6 +193,11 @@ p.download,
 	margin-bottom: 10px;
 }
 
+#NewsList .newsSummary li
+{
+	list-style-type: disc;
+}
+
 #Screenshot
 {
 	border: solid 3px #650b03; 
@@ -194,6 +216,7 @@ p.download,
 #PlatformList li
 {
 	list-style-type: none;
+	margin-bottom: 1em;
 }
 
 #PlatformList img
@@ -201,4 +224,44 @@ p.download,
 	vertical-align: middle;
 	margin-right: 1em;
 	border: none;
+}
+
+#CommentHolder
+{
+	border: solid 3px #650b03;
+}
+
+#PageComments
+{
+	font-size: 0.8em;
+	padding: 0;
+	margin: 0;
+}
+
+#PageComments .odd
+{
+	background-color: #272D2C;
+}
+
+#PageComments li
+{
+	list-style-type: none;
+	padding: 0 20px;
+}
+
+#PageComments .comment
+{
+	padding-top: 20px;
+	margin: 0;
+	/*font-size: 1.2em;*/
+}
+
+#PageComments .actionLinks
+{
+	padding-bottom: 20px;
+}
+
+#PageComments .actionLinks li
+{
+	display: inline;
 }

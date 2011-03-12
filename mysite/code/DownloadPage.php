@@ -96,7 +96,8 @@ class DownloadPage_Controller extends Page_Controller {
 			return;
 		}
 		$this->data()->DownloadCount += 1;
-		$this->data()->write();	
+		$this->data()->writeToStage('Stage');
+		$this->data()->publish('Stage', 'Live');
 		Director::redirect($download_file->getRelativePath());
 	}
 	

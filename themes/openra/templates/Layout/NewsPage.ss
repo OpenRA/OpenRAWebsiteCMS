@@ -13,6 +13,8 @@
         Posted on $Date.Nice24 by $Author.FirstName $Author.Surname
     </div>
     $Content
+<% uncached %>
     $PageComments
+<% end_uncached %>
 </div>
 <% end_cached %>
