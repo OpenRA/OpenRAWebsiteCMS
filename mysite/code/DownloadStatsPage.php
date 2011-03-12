@@ -17,8 +17,8 @@ class DownloadStatsPage_Controller extends Page_Controller {
 
 		$foo = array();
 
-		for ($i = 0; $i < count($labels); i++) {
-			$foo[$labels[i]] = $values[i];
+		for ($i = 0; $i < count($labels); $i++) {
+			$foo[$labels[$i]] = $values[$i];
 		}
 
 		rsort($foo);
