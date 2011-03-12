@@ -11,6 +11,7 @@ class DownloadStatsPage_Controller extends Page_Controller {
 		foreach ($downloads as $download) {
 			$label = explode(" ", $download->Title);
 			$temp = $label[0];
+			print($temp);
 			$values[$temp] = $download->DownloadCount;
 		}
 
