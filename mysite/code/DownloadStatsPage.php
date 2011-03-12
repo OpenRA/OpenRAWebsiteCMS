@@ -23,7 +23,7 @@ class DownloadStatsPage_Controller extends Page_Controller {
 		$min = $values[0];
 		$max = $values[count($values) - 1];
 
-		$url = $url . "&chds=$min,$max&chxr=1,$min,$max"; //Chart scale
+		$url = $url . "&chds=0,$max&chxr=1,$min,$max"; //Chart scale
 
 		$url = $url . "&chs=400x200"; //Chart size
 
