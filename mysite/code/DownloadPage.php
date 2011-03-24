@@ -3,12 +3,12 @@
 class DownloadPage extends Page {
 	static $db = array(
 		'Folder' => 'Text',
-		'FilePattern' => 'Text',
-		'DownloadCount' => 'Int'
+		'FilePattern' => 'Text'
 	);
 
 	static $has_one = array(
-		'PlatformImage' => 'Image'
+		'PlatformImage' => 'Image',
+		'DownloadCount' => 'DownloadCount'
 	);
 
 	static $allowed_children = 'none';
@@ -97,10 +97,19 @@ class DownloadPage_Controller extends Page_Controller {
 			$this->httpError(404);
 			return;
 		}
-		$this->data()->DownloadCount += 1;
-		$this->data()->writeToStage('Stage');
-		$this->data()->publish('Stage', 'Live');
-		Director::redirect($download_file->getRelativePath());
+
+		$downloadCount = $this->data()->DownloadCount();
+		if (!$downloadCount->exists()) {
+			$downloadCount = new DownloadCount();
+			$downloadCount->write();
+			$this->data()->setField('DownloadCountID', $downloadCount->ID);
+			$this->data()->writeToStage('Stage');
+			$this->data()->publish('Stage', 'Live');
+		}
+
+		$downloadCount->setField('Count', $downloadCount->getField('Count') + 1);
+		$downloadCount->write();
+//		Director::redirect($download_file->getRelativePath());
 	}
 	
 	function FolderModCacheKey() {

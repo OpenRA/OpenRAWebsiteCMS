@@ -59,8 +59,7 @@ class HomePage_Controller extends Page_Controller {
 	}
 	
 	function DownloadSum() {
-		return 
-$this->Aggregate('DownloadPage')->Sum('DownloadCount') + 30023;
+		return $this->Aggregate('DownloadCount')->Sum('Count') + 30023;
 	}
 	
 	function GamesPlayed() {
