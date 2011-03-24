@@ -27,7 +27,7 @@ class HomePage_Controller extends Page_Controller {
 		$user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
 		$windows = new ArrayData(array('Name' => 'win', 'Desc' => 'Windows'));
 		$linux = new ArrayData(array('Name' => 'linux', 'Desc' => 'GNU/Linux'));
-		$mac = new ArrayData(array('Name' => 'mac', 'Desc' => 'OS X'));
+		$mac = new ArrayData(array('Name' => 'osx', 'Desc' => 'OS X'));
 		if (strpos($user_agent, "x11") !== FALSE || strpos($user_agent, "linux") !== FALSE)
 			return new ArrayData(array('Main' => $linux, 'Other1' => $windows, 'Other2' => $mac));
 		else if (strpos($user_agent, "mac") !== FALSE)
