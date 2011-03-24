@@ -109,7 +109,7 @@ class DownloadPage_Controller extends Page_Controller {
 
 		$downloadCount->setField('Count', $downloadCount->getField('Count') + 1);
 		$downloadCount->write();
-//		Director::redirect($download_file->getRelativePath());
+		Director::redirect($download_file->getRelativePath());
 	}
 	
 	function FolderModCacheKey() {
