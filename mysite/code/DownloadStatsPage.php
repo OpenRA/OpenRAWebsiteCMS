@@ -11,7 +11,10 @@ class DownloadStatsPage_Controller extends Page_Controller {
 		foreach ($downloads as $download) {
 			$label = explode(" ", $download->Title);
 			$temp = $label[0];
-			$values[$temp] = $download->DownloadCount;
+			if ($download->DownloadCount()->exists()) 
+				$values[$temp] = $download->DownloadCount()->getField("Count");
+			else
+				$values[$temp] = 0;
 		}
 
 		arsort($values);
