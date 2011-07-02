@@ -1,5 +1,5 @@
 <% include Sidebar %>
-<% cached LastEdited %>
+<% cached Title, LastEdited %>
 <div id="Content" class="twocolumn typography">
 	$Content
 	$Form

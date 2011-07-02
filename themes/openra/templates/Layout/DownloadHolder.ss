@@ -1,4 +1,4 @@
-<% cached LastEdited %>
+<% cached 'downloadholder', Title, LastEdited %>
 <div id="Content" class="singlecolumn typography">
 $Content
 <ul id="PlatformList">

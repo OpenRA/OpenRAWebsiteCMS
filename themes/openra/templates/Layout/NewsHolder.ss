@@ -1,4 +1,4 @@
-<% cached LastEdited %>
+<% cached Title, LastEdited %>
 <div id="Content" class="singlecolumn typography">
 	<h2>$Title</h2>
 	$Content

@@ -1,4 +1,4 @@
-<% cached LastEdited %>
+<% cached Title, LastEdited %>
 <div id="Content" class="singlecolumn typography">
 	<% cached 'parent', $Parent.LastEdited, LastEdited %>
     <% if Level(2) %>
