@@ -1,6 +1,6 @@
 <% cached Title, LastEdited %>
 <div id="Content" class="singlecolumn typography">
-	<% cached 'parent', $Parent.LastEdited, LastEdited %>
+	<% cached 'parent', Title, $Parent.LastEdited, LastEdited %>
     <% if Level(2) %>
         <div class="breadcrumbs">
             $Breadcrumbs
