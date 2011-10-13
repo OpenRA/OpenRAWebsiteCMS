@@ -10,7 +10,7 @@
 	</p>
 	<div style="margin: 5px auto; width: 100%">
 		<span class="stats">
-			<strong id="stats_games">$GamesPlayed</strong><span class="desc">total games played</span>
+			<strong id="stats_games">$GamesPlayed</strong><span class="desc">public games played</span>
 		</span>
 		<span class="stats">
 			<strong id="stats_down">$DownloadSum</strong><span class="desc">downloads</span>
