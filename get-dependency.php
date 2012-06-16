@@ -8,6 +8,9 @@ switch ($_GET["file"])
     case "cnc-packages":
         $mirrors_file = "packages/cnc-mirrors.txt";
         break;
+    case "d2k-packages":
+        $mirrors_file = "packages/d2k-mirrors.txt";
+        break;
     case "osx-deps-v2":
         $mirrors_file = "releases/mac/osx-dependencies-mirrors.txt";
         break;
